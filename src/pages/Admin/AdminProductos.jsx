@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AdminSidebar from '../../components/admin/AdminSidebar';
+import AdminSidebar from '../../components/Admin/AdminSidebar';
 import productsService from '../../services/products';
 
 export default function AdminProductos() {

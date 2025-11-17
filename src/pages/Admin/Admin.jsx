@@ -12,9 +12,9 @@ import {
   Legend,
   Filler,
 } from 'chart.js';
-import AdminSidebar from '../../components/admin/AdminSidebar';
-import KPICard from '../../components/admin/Kpicard';
-import ChartCard from '../../components/admin/Chartcard';
+import AdminSidebar from '../../components/Admin/AdminSidebar';
+import KPICard from '../../components/Admin/Kpicard';
+import ChartCard from '../../components/Admin/Chartcard';
 import analyticsService from '../../services/analytics';
 import productsService from '../../services/products';
 import ordersService from '../../services/orders';

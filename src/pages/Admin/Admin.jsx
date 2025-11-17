@@ -12,7 +12,7 @@ import {
   Legend,
   Filler,
 } from 'chart.js';
-import AdminSidebar from '../../components/Admin/AdminSidebar';
+import AdminSidebar from '../../components/admin/AdminSidebar';
 import KPICard from '../../components/Admin/Kpicard';
 import ChartCard from '../../components/Admin/Chartcard';
 import analyticsService from '../../services/analytics';

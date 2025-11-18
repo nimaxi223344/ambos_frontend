@@ -1,4 +1,4 @@
-const MP_SERVICE_URL = 'http://localhost:3001';
+const MP_SERVICE_URL = import.meta.env.MP_SERVICE_URL
 
 const mercadopagoService = {
   /**

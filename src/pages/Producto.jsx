@@ -430,22 +430,24 @@ export default function Producto() {
             </div>
           </div>
           {hayMultiplesImagenes && (
-            <div className="flex flex-wrap gap-3 justify-center max-w-md">
-              {imagenesParaMostrar.map((url, index) => {
-                const isActive = imagenActiva === index;
-                return (
-                  <button
-                    key={url + index}
-                    type="button"
-                    onClick={() => setImagenActiva(index)}
-                    className={`w-20 h-20 overflow-hidden border-2 transition ${isActive ? "border-[#084B83]" : "border-transparent"
-                      }`}
-                    aria-label={`Ver imagen ${index + 1}`}
-                  >
-                    <img src={url} alt="" className="w-full h-full object-cover" />
-                  </button>
-                );
-              })}
+            <div className="w-full max-w-lg mx-auto overflow-x-auto no-scrollbar">
+              <div className="flex gap-3 flex-nowrap">
+                {imagenesParaMostrar.map((url, index) => {
+                  const isActive = imagenActiva === index;
+                  return (
+                    <button
+                      key={url + index}
+                      type="button"
+                      onClick={() => setImagenActiva(index)}
+                      className={`w-20 h-20 flex-shrink-0 overflow-hidden border-2 transition ${isActive ? "border-[#084B83]" : "border-transparent"
+                        }`}
+                      aria-label={`Ver imagen ${index + 1}`}
+                    >
+                      <img src={url} alt="" className="w-full h-full object-cover" />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           )}
         </div>

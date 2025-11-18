@@ -186,7 +186,7 @@ export default function CategoryFilter({ defaultFilters, onFiltersChange }) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   return (
-    <div className="h-full bg-[#F0F6F6] md:flex md:items-start mt-24 md:mt-36">
+    <div className="h-full bg-[#F0F6F6] mt-24 md:mt-36">
       <div className="px-6 md:px-20">
         <h2 className="text-4xl text-center md:text-left font-bold text-[#084B83] mb-4 md:mb-8 tracking-wider">
           CATÁLOGO

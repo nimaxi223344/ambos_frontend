@@ -282,10 +282,10 @@ export default function Catalogo() {
 
   return (
     <section className="min-h-screen bg-[#F0F6F6] flex flex-col md:flex-row">
-      <aside className="w-full md:w-96 bg-white border-gray-200">
+      <aside className="w-full md:w-96 bg-[#F0F6F6] md:ml-32">
         <CategoryFilter defaultFilters={filters} onFiltersChange={handleFiltersChange} />
       </aside>
-      <main className="flex-1 p-8 md:pt-32">
+      <main className="flex-1 px-6 pb-6 md:pt-32">
         {loading && <p className="text-gray-600">Cargando productos...</p>}
         {error && <p className="text-red-600">{error}</p>}
         {!loading && !error && (

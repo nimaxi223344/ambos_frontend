@@ -14,18 +14,14 @@ export default function Navbar() {
 
   useEffect(() => {
     const loadProfile = async () => {
-      // IMPORTANTE: En área de cliente, SOLO verificar autenticación de cliente
-      // NO usar authService.isAuthenticated() que verifica admin O cliente
       const isClientAuth = authService.isClienteAuthenticated();
       
       if (isClientAuth) {
         setIsLoggedIn(true);
         try {
-          // Especificar explícitamente que es cliente (isAdmin = false)
           const data = await authService.getProfile(false);
           setUsuario(data);
         } catch (error) {
-          // Si falla, limpiar sesión de cliente
           console.error('Error al cargar perfil de cliente:', error);
           authService.logoutCliente();
           setUsuario(null);
@@ -42,7 +38,6 @@ export default function Navbar() {
 
   const handleLogout = () => {
     try {
-      // En área de cliente, solo hacer logout de cliente
       authService.logoutCliente();
       setUsuario(null);
       setIsLoggedIn(false);

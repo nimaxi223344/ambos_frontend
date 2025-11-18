@@ -66,60 +66,55 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <div className="bg-[#084B83] text-white w-full md:h-12 h-24 flex items-center justify-center">
-        <p className="text-center">Resistencia y Corrientes · Lunes a Viernes 9:00-13:00 y 17:00-21:00, Sábados 9:00-13:00 y 16:00-20:00</p>
+      <div className="bg-[#084B83] text-white w-full h-12 flex items-center justify-center">
+        
+        <Link to={{ pathname: "/contacto"}}>
+        <p className="text-center text-sm">Encontranos en Resistencia y Corrientes</p>
+        </Link>
       </div>
       <section className="max-w-6xl mx-auto px-6 pt-16 grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div className="bg-white/90 backdrop-blur-sm border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#084B83]/20 transition transform hover:-translate-y-1">
-          <div className="relative h-40 md:h-80 overflow-hidden">
-            <img src={Hombre}/>
-          </div>
-          <div className="p-6 flex items-center justify-between gap-4">
-            <div className="space-y-1">
-              <h2 className="text-base font-semibold text-[#084B83]">
-                Para hombres
-              </h2>
+          <Link to={{ pathname: "/catalogo", search: "?sexo=M" }}>
+            <div className="relative h-40 md:h-80 overflow-hidden">
+              <img src={Hombre} />
             </div>
-            <Link
-              to={{ pathname: "/catalogo", search: "?sexo=M" }}
-              className="inline-flex items-center gap-2 whitespace-nowrap bg-[#000000] text-[white] text-xs px-4 py-2 rounded-full font-semibold transition group-hover:translate-x-0.5"
-            >
-              VER
-            </Link>
-          </div>
+            <div className="p-6 flex items-center justify-between gap-4">
+              <div className="space-y-1">
+                <h2 className="uppwecase text-xl font-semibold">
+                  Para hombres
+                </h2>
+              </div>
+            </div>
+          </Link>
         </div>
         <div className="bg-white/90 backdrop-blur-sm border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#084B83]/20 transition transform hover:-translate-y-1">
-          <div className="relative h-40 md:h-80 overflow-hidden">
-            <img src={Mujer} />
-          </div>
-          <div className="p-6 flex items-center justify-between gap-4">
-            <div className="space-y-1">
-              <h2 className="text-base font-semibold text-[#084B83]">
-                Para mujeres
-              </h2>
+          <Link to={{ pathname: "/catalogo", search: "?sexo=M" }}>
+            <div className="relative h-40 md:h-80 overflow-hidden">
+              <img src={Mujer} />
             </div>
-            <Link
-              to={{ pathname: "/catalogo", search: "?sexo=F" }}
-              className="inline-flex items-center gap-2 whitespace-nowrap bg-[#000000] text-[white] text-xs px-4 py-2 rounded-full font-semibold transition group-hover:translate-x-0.5"
-            >
-              VER
-            </Link>
-          </div>
+            <div className="p-6 flex items-center justify-between gap-4">
+              <div className="space-y-1">
+                <h2 className="uppwecase text-xl font-semibold">
+                  Para mujeres
+                </h2>
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sm font-semibold tracking-wider text-[#084B83] mb-2">
+          <p className="text-sm font-semibold tracking-wider mb-2">
             SUMATE A NOSOTROS
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#084B83] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#084B83]">
             Nuestro Canal
           </h2>
-          <p className="text-[#084B83] mb-8 max-w-md mx-auto">
+          <p className="mb-6 max-w-md mx-auto">
             Un espacio para enterarte antes que nadie de nuestras novedades, promos exclusivas y lanzamientos.
           </p>
           <a
-            href="https://l.instagram.com/?u=https%3A%2F%2Fchat.whatsapp.com%2FFCX2Pm5lgkO6MBVmItgUws%3Fmode%3Dr_t%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4CGNhbGxzaXRlAjE1AAGn7t7aQxuJgmV7tPU-3u1qgQ4ED6xyXaeXyfR6m1RizWybSFN_N8tqjdKbEw4_aem__PIlia4bNP2jImwZC_C1MA&e=AT2HykbWOTHalO0zFFEvgJQoPGRN8xt2HYXNWgS_dDWye3g4jNgsz9iurdN0nYTF8bPh9qy5exFUev2kVwX9wlBZb0BJY3nNdCprJ8PUrg"
+            href="https://chat.whatsapp.com/FCX2Pm5lgkO6MBVmItgUws?mode=r_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnJuazfsu1_StKHl23FjlY1eIHIJBBHHJvHuiHI8TwZajxX1e3W2JGEfdTw4k_aem_RsL_r_BpySMT87dhlp9GWw"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#20BD5A] transition"

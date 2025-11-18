@@ -293,7 +293,12 @@ export default function Producto() {
   if (error) return <section className="min-h-screen px-6 md:px-20 py-12 text-red-600">{error}</section>;
   if (!producto) return null;
 
-  const price = typeof producto.precio === "number" ? `$${producto.precio.toFixed(2)}` : producto.precio;
+  const price = (() => {
+    const num = typeof producto.precio === "string"
+      ? parseFloat(producto.precio.replace(",", "."))
+      : producto.precio;
+    return isNaN(num) ? producto.precio : Math.round(num).toLocaleString("es-AR");
+  })();
 
   const handleAddToCart = () => {
     if (!isLoggedIn) {
@@ -392,15 +397,15 @@ export default function Producto() {
   };
 
   return (
-    <section className="min-h-screen bg-[#F0F6F6] px-6 md:px-20 p-36">
-      <div className="flex flex-col md:flex-row gap-10 items-start mb-16">
-        <div className="flex-1 flex flex-col items-center gap-4 w-full">
-          <div className="w-full max-w-md">
-            <div className="relative rounded-2xl bg-white shadow-md overflow-hidden">
+    <section className="min-h-screen bg-[#F0F6F6] px-6 md:px-32 pt-20 pb-12 md:pt-0">
+      <div className="md:h-screen flex flex-col md:flex-row items-center">
+        <div className="flex-1 flex flex-col items-center gap-6 w-full pb-12 md:pb-0">
+          <div className="w-full md:px-24">
+            <div className="relative shadow-md overflow-hidden">
               <img
                 src={imagenActivaUrl}
                 alt={`${producto.nombre} - imagen ${imagenActiva + 1}`}
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[420px] md:h-[600px] object-cover"
               />
               {hayMultiplesImagenes && (
                 <>
@@ -433,7 +438,7 @@ export default function Producto() {
                     key={url + index}
                     type="button"
                     onClick={() => setImagenActiva(index)}
-                    className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition ${isActive ? "border-[#084B83]" : "border-transparent"
+                    className={`w-20 h-20 overflow-hidden border-2 transition ${isActive ? "border-[#084B83]" : "border-transparent"
                       }`}
                     aria-label={`Ver imagen ${index + 1}`}
                   >
@@ -445,11 +450,11 @@ export default function Producto() {
           )}
         </div>
         <div className="flex-1 space-y-6">
-          <h1 className="text-3xl font-semibold text-[#2F4858]">{producto.nombre}</h1>
-          <p className="text-2xl font-bold">{price}</p>
+          <h1 className="text-3xl font-bold">{producto.nombre}</h1>
+          <p className="text-2xl font-semibold">${price}</p>
           {coloresDisponibles.length > 0 && (
             <div>
-              <h3 className="font-medium mb-2">COLOR</h3>
+              <h3 className="font-medium mb-2">Color</h3>
               <div className="flex gap-3 flex-wrap">
                 {coloresDisponibles.map((color) => {
                   const isActive = colorSeleccionado === color.id;
@@ -475,7 +480,7 @@ export default function Producto() {
           )}
           {tallesDisponibles.length > 0 ? (
             <div>
-              <h3 className="font-medium mb-2">TALLE</h3>
+              <h3 className="font-medium mb-2">Talle</h3>
               <div className="flex gap-2 flex-wrap">
                 {tallesDisponibles.map((talle) => {
                   const isActive = talleSeleccionado === talle.id;
@@ -563,16 +568,16 @@ export default function Producto() {
               AGREGAR AL CARRITO
             </button>
           </div>
+          {producto.descripcion && (
+            <div className="bg-white border border-gray-200 p-6 rounded-lg mb-16">
+              <h2 className="text-xl font-semibold mb-3">Descripción</h2>
+              <p className="text-gray-600 leading-relaxed">{producto.descripcion}</p>
+            </div>
+          )}
         </div>
       </div>
-      {producto.descripcion && (
-        <div className="bg-white border border-gray-200 p-6 rounded-lg mb-16">
-          <h2 className="text-xl font-semibold mb-3">Descripción</h2>
-          <p className="text-gray-600 leading-relaxed">{producto.descripcion}</p>
-        </div>
-      )}
-      <div>
-        <h2 className="text-xl font-semibold mb-6">Otros productos</h2>
+      <div className="pt-12 md:pt-0">
+        <h2 className="text-xl font-semibold mb-4">Otros productos</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {otros.map((p) => (
             <ProductCard

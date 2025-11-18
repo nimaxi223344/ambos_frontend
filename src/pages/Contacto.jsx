@@ -1,11 +1,11 @@
 export default function Contacto() {
   return (
-    <section className="bg-[#F0F6F6] h-screen px-6 md:px-20 py-16 flex items-center">
+    <section className="bg-[#F0F6F6] md:h-screen h-full px-6 md:px-20 py-12 flex items-center">
       <div className="max-w-6xl mx-auto w-full space-y-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 items-center">
           <div className="space-y-6 mt-12 md:mt-24">
             <header className="space-y-3 text-center md:text-left">
-              <h1 className="text-3xl md:text-4xl font-semibold text-[#084B83]">
+              <h1 className="text-4xl font-bold text-[#084B83] tracking-wider">
                 CONTACTO
               </h1>
               <p className="text-sm md:text-base text-gray-700 max-w-2xl">
@@ -15,7 +15,7 @@ export default function Contacto() {
 
             <div className="bg-[#084B83] rounded-2xl p-6 text-white shadow-sm">
               <h2 className="text-lg font-semibold mb-3">
-                Hablemos por redes
+                REDES SOCIALES
               </h2>
               <p className="text-sm text-white/90 mb-4">
                 Escribinos por Instagram o unite al canal de WhatsApp
@@ -31,7 +31,7 @@ export default function Contacto() {
                   <span>Instagram</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://chat.whatsapp.com/FCX2Pm5lgkO6MBVmItgUws?mode=r_t&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnJuazfsu1_StKHl23FjlY1eIHIJBBHHJvHuiHI8TwZajxX1e3W2JGEfdTw4k_aem_RsL_r_BpySMT87dhlp9GWw"
                   className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-white/60 text-sm font-medium px-4 py-2 hover:bg-white/10 transition"
                 >
                   <span>Canal de WhatsApp</span>
@@ -40,11 +40,11 @@ export default function Contacto() {
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
               <h2 className="text-lg font-semibold text-[#2F4858] mb-2">
-                Horarios de atención
+                HORARIOS DE ATENCIÓN
               </h2>
               <ul className="text-sm text-gray-700 space-y-1">
-                <li>Lunes a viernes de 9 a 13 h y de 17 a 21 h.</li>
-                <li>Sábados de 9 a 13 h y de 16 a 20 h.</li>
+                <li>Lunes a viernes de 9:00 a 13:00 y de 17:00 a 21:00.</li>
+                <li>Sábados de 9:00 a 13:00 y de 16:00 a 20:00.</li>
               </ul>
             </div>
           </div>

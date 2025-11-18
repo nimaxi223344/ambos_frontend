@@ -5,6 +5,7 @@ const authService = {
   
   loginAdmin: async (email, password) => {
     try {
+      // ✅ FIX: NO limpiar sesión de cliente, pueden coexistir
       const response = await api.post('/auth/login/', {
         email,
         password
@@ -94,6 +95,7 @@ const authService = {
   
   loginCliente: async (email, password) => {
     try {
+      // ✅ FIX: NO limpiar sesión de admin, pueden coexistir
       const response = await api.post('/auth/login/', {
         email,
         password

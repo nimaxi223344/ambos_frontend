@@ -316,22 +316,6 @@ export default function AdminLogin() {
               </Link>
             </div>
           </div>
-
-          {/* Demo credentials (remover en producción) */}
-          <div className="mt-4 sm:mt-6 text-center">
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 sm:p-4 text-xs sm:text-sm">
-              <p className="font-semibold text-yellow-800 mb-2">
-                <i className="fas fa-info-circle mr-1"></i>
-                Credenciales de prueba
-              </p>
-              <p className="text-yellow-700">
-                Email: <code className="bg-yellow-100 px-2 py-1 rounded text-xs">admin@test.com</code>
-              </p>
-              <p className="text-yellow-700">
-                Pass: <code className="bg-yellow-100 px-2 py-1 rounded text-xs">admin123</code>
-              </p>
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>

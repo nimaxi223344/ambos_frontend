@@ -88,7 +88,7 @@ export default function Landing() {
           </Link>
         </div>
         <div className="bg-white/90 backdrop-blur-sm border border-gray-200/70 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-[#084B83]/20 transition transform hover:-translate-y-1">
-          <Link to={{ pathname: "/catalogo", search: "?sexo=M" }}>
+          <Link to={{ pathname: "/catalogo", search: "?sexo=F" }}>
             <div className="relative h-40 md:h-80 overflow-hidden">
               <img src={Mujer} />
             </div>
